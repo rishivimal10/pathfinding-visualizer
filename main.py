@@ -45,6 +45,7 @@ def main_menu(win):
         win.fill(Colours.BLACK.value)
         b1 = button(win, (300, 300), "Dijkstra's Algorithm")
         b2 = button(win, (300, 350), "A* Search")
+        b3 = button(win, (300, 400), "Greedy Best-first Search")
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -57,6 +58,9 @@ def main_menu(win):
                 elif b2.collidepoint(pygame.mouse.get_pos()):
                     pg.display.set_caption("A* Search")
                     main(win, GRID_WIDTH, Algorithms.A_STAR)
+                elif b3.collidepoint(pygame.mouse.get_pos()):
+                    pg.display.set_caption("Greedy Best-first Search")
+                    main(win, GRID_WIDTH, Algorithms.GREEDY_BFS)
         pg.display.update()
     pg.quit()
 
@@ -134,10 +138,13 @@ def main(win, grid_width, algorithm: Algorithms):
                             node.update_neighbours(grid)
 
                     if algorithm == Algorithms.A_STAR:
-                        greedy_bfs(lambda: draw(win, grid, rows, grid_width), grid, start, end)
+                        astar_algorithm(lambda: draw(win, grid, rows, grid_width), grid, start, end)
 
                     elif algorithm == Algorithms.DIJKSTRAS:
                         dijkstras_algorithm(lambda: draw(win, grid, rows, grid_width), grid, start, end)
+
+                    elif algorithm == Algorithms.GREEDY_BFS:
+                        greedy_bfs(lambda: draw(win, grid, rows, grid_width), grid, start, end)
 
 
 main_menu(WIN)
