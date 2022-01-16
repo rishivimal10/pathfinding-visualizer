@@ -1,6 +1,6 @@
 # Pathfinding Visualizer
 
-This project uses Python and Pygame to visualize pathfinding algorithms.
+This project uses Python and Pygame to visualize pathfinding algorithms. Currently supports Dijkstra's Algorithm and A* Search.
 
 Example Result of A* Search:
 
@@ -11,13 +11,15 @@ Example Result of A* Search:
 
 ## How to use
 
-1. Left-click on any square on the grid to choose the starting spot. This will be represented by the colour orange
-2. Left-click again on a different square to choose the destination. This will be represented by the colour blue
-3. Any subsequent left-clicks will create barriers on the square. These will be represented by the colour black
-4. Right-click on any square to reset it.
-5. Once the start, end, and barriers are set, press SPACE to start the algorithm
-6. Once the algorithm is done, the shortest path, if it exists, will be shown in purple
-7. Press 'c' at any time (while the algorithm is not running) to reset the whole grid
+1. Choose which algorithm you would like to visualize
+2. Left-click on any square on the grid to choose the starting spot. This will be represented by the colour orange
+3. Left-click again on a different square to choose the destination. This will be represented by the colour blue
+4. Any subsequent left-clicks will create barriers on the square. These will be represented by the colour black
+5. Right-click on any square to reset it.
+6. Once the start, end, and barriers are set, press SPACE to start the algorithm
+7. Once the algorithm is done, the shortest path, if it exists, will be shown in purple
+8. Press 'c' at any time (while the algorithm is not running) to reset the whole grid
+9. Press ESC at any time to go back to the main menu
 
 ## Supported Algorithms
 
