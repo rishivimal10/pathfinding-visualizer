@@ -42,6 +42,7 @@ def draw_found_path(came_from, end, draw_lambda_func):
     current = end
     while current in came_from:
         current = came_from[current]
-        current.make_path()
+        if current != end:
+            current.make_path()
         draw_lambda_func()
     current.make_start()

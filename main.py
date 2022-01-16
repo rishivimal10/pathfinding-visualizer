@@ -51,8 +51,10 @@ def main_menu(win):
 
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if b1.collidepoint(pygame.mouse.get_pos()):
+                    pg.display.set_caption("Dijkstra's Algorithm")
                     main(win, GRID_WIDTH, Algorithms.DIJKSTRAS)
                 elif b2.collidepoint(pygame.mouse.get_pos()):
+                    pg.display.set_caption("A* Search")
                     main(win, GRID_WIDTH, Algorithms.A_STAR)
         pg.display.update()
     pg.quit()

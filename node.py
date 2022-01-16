@@ -24,7 +24,7 @@ class Node:
         return self.colour == Colours.RED
 
     def is_open(self):
-        return self.colour == Colours.GREEN
+        return self.colour == Colours.TURQUOISE
 
     def is_barrier(self):
         return self.colour == Colours.BLACK
@@ -33,7 +33,7 @@ class Node:
         return self.colour == Colours.ORANGE
 
     def is_end(self):
-        return self.colour == Colours.TURQUOISE
+        return self.colour == Colours.PURPLE
 
     def reset(self):
         self.colour = Colours.WHITE
@@ -45,16 +45,16 @@ class Node:
         self.colour = Colours.RED
 
     def make_open(self):
-        self.colour = Colours.GREEN
+        self.colour = Colours.TURQUOISE
 
     def make_barrier(self):
         self.colour = Colours.BLACK
 
     def make_end(self):
-        self.colour = Colours.TURQUOISE
+        self.colour = Colours.PURPLE
 
     def make_path(self):
-        self.colour = Colours.PURPLE
+        self.colour = Colours.GREEN
 
     def draw(self, win):
         pg.draw.rect(win, self.colour.value, (self.x_coord, self.y_coord, self.width, self.width))
