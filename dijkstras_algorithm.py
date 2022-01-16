@@ -37,9 +37,9 @@ def dijkstras_algorithm(draw, grid, start, end):
                     count += 1
                     open_set_queue.put((distance_from_start[neighbour], count, neighbour))
                     open_set_set.add(neighbour)
-                    if neighbour != end:
-                        neighbour.make_open()
 
+                    if not neighbour.is_end():
+                        neighbour.make_open()
         draw()
 
         if current != start:

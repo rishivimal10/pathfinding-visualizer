@@ -24,7 +24,7 @@ class Node:
         return self.colour == Colours.RED
 
     def is_open(self):
-        return self.colour == Colours.TURQUOISE
+        return self.colour == Colours.BLUE
 
     def is_barrier(self):
         return self.colour == Colours.BLACK
@@ -45,7 +45,7 @@ class Node:
         self.colour = Colours.RED
 
     def make_open(self):
-        self.colour = Colours.TURQUOISE
+        self.colour = Colours.BLUE
 
     def make_barrier(self):
         self.colour = Colours.BLACK
