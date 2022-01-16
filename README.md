@@ -4,9 +4,14 @@ This project uses Python and Pygame to visualize pathfinding algorithms. Current
 
 Example Result of A* Search:
 
-<img width="500" alt="Screen Shot 2022-01-15 at 5 52 24 PM" src="https://user-images.githubusercontent.com/56571102/149640127-23496bbd-a847-4ad7-87c9-5ef35f9566ec.png">
+<img width="750" alt="Screen Shot 2022-01-15 at 8 15 39 PM" src="https://user-images.githubusercontent.com/56571102/149643573-af9624dd-aa74-4aef-b1ce-07c6fceb40b5.png">
 
-(orange = start, blue = end, black = barrier, purple = shortest path, red = closed node, green = open node)
+Example Result of Dijkstra's Algorithm:
+
+<img width="750" alt="Screen Shot 2022-01-15 at 8 17 16 PM" src="https://user-images.githubusercontent.com/56571102/149643607-d07ed3b1-f855-487f-9afc-465086a3260e.png">
+
+
+(orange = start, purple = end, black = barrier, green = shortest path, red = closed node, blue = open node)
 
 
 ## How to use
