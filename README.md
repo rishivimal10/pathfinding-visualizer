@@ -1,17 +1,20 @@
 # Pathfinding Visualizer
 
-This project uses Python and Pygame to visualize pathfinding algorithms. Currently supports Dijkstra's Algorithm and A* Search.
-
-Example Result of A* Search:
-
-<img width="750" alt="Screen Shot 2022-01-15 at 8 15 39 PM" src="https://user-images.githubusercontent.com/56571102/149643573-af9624dd-aa74-4aef-b1ce-07c6fceb40b5.png">
+This project uses Python and Pygame to visualize pathfinding algorithms. Currently supports Dijkstra's Algorithm, A* Search, and Greedy Best-first Search.
 
 Example Result of Dijkstra's Algorithm:
 
-<img width="750" alt="Screen Shot 2022-01-15 at 8 17 16 PM" src="https://user-images.githubusercontent.com/56571102/149643607-d07ed3b1-f855-487f-9afc-465086a3260e.png">
+<img width="500" alt="Screen Shot 2022-01-15 at 8 17 16 PM" src="https://user-images.githubusercontent.com/56571102/149643607-d07ed3b1-f855-487f-9afc-465086a3260e.png">
 
+Example Result of A* Search:
 
-(orange = start, purple = end, black = barrier, green = shortest path, red = closed node, blue = open node)
+<img width="500" alt="Screen Shot 2022-01-15 at 8 15 39 PM" src="https://user-images.githubusercontent.com/56571102/149643573-af9624dd-aa74-4aef-b1ce-07c6fceb40b5.png">
+
+Example Result of Greedy Best-first Search:
+
+<img width="500" alt="Screen Shot 2022-01-16 at 12 58 58 PM" src="https://user-images.githubusercontent.com/56571102/149671909-47a30d31-52f2-4598-89b6-d45313551d97.png">
+
+(orange = start, purple = end, black = barrier, green = path, red = closed node, blue = open node)
 
 
 ## How to use
@@ -37,3 +40,8 @@ This implementation of Djikstra's algorithm uses a Priority Queue which is prior
 https://en.wikipedia.org/wiki/A*_search_algorithm
 
 A* search is very similar to Dijkstra's algorithm except it uses a heuristic to inform the searching. Instead of the Priority Queue being prioritized by only the distance from the start node to the current node, the queue is prioritized by f_score, which is calculated by adding the distance from the start node to the current node with the estimated distance to the end node (this implementation estimated distance by calculating manhattan distance)
+
+### Greedy Best-first Search
+https://en.wikipedia.org/wiki/Best-first_search#Greedy_BFS
+
+This implementation of Greedy Best-first search uses a Priority Queue which is ordered by the value of a heuristic (manhattan distance to end node). Greedy Best-first search does not guarantee the shortest path.
