@@ -28,10 +28,10 @@ def dijkstras_algorithm(draw, grid, start, end):
             return True
 
         for neighbour in current.neighbours:
-            temp_g_score = distance_from_start[current] + 1
+            temp_score = distance_from_start[current] + 1
 
-            if temp_g_score < distance_from_start[neighbour]:
-                distance_from_start[neighbour] = temp_g_score
+            if temp_score < distance_from_start[neighbour]:
+                distance_from_start[neighbour] = temp_score
                 came_from[neighbour] = current
                 if neighbour not in open_set_set:
                     count += 1

@@ -8,6 +8,7 @@ from colours import Colours
 from dijkstras_algorithm import dijkstras_algorithm
 from grid import make_grid, draw
 from supported_algorithms import Algorithms
+from greedy_bfs_algorithm import greedy_bfs
 
 GRID_WIDTH = 750
 WIN = pg.display.set_mode((GRID_WIDTH, GRID_WIDTH))
@@ -133,7 +134,7 @@ def main(win, grid_width, algorithm: Algorithms):
                             node.update_neighbours(grid)
 
                     if algorithm == Algorithms.A_STAR:
-                        astar_algorithm(lambda: draw(win, grid, rows, grid_width), grid, start, end)
+                        greedy_bfs(lambda: draw(win, grid, rows, grid_width), grid, start, end)
 
                     elif algorithm == Algorithms.DIJKSTRAS:
                         dijkstras_algorithm(lambda: draw(win, grid, rows, grid_width), grid, start, end)
